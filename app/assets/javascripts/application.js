@@ -14,3 +14,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require materialize
+
+// MADE FOR FUNCTIONALITY FOR MATERIALIZE FORMS
+$(document).ready(function () {
+    $('select').material_select();
+});
