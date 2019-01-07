@@ -1,0 +1,23 @@
+<h1>Hello There</h1>
+
+<div class ="row" id ="form_home">
+    <%= form_for @teacher, :html => {:class =>"col s5"} do |f| %>
+        <div class="row">
+            <div class="input-field col s12">
+                
+                <%=f.text_field :email, html: {class: "validate", id: "email", type: "email"}%>
+                <label for="email">Email</label>
+                <span class ="helper-text" data-error="wrong" data-success="right"> </span>
+            </div>
+            <br>
+            <div class="input-field col s12">
+                <%=f.text_field :password, html: {class: "validate", id: "password", type: "password"}%>
+                <label for="password">Password</label>
+                <span class ="helper-text" data-error="wrong" data-success="right"></span>
+            </div>
+        </div>
+        <a class="waves-effect waves-light btn-large">
+        <%=f.submit%>
+        </a>
+    <%end%>
+</div>
