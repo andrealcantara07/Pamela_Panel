@@ -1,0 +1,49 @@
+<center><h3>Register Here</h3></center>
+
+<% if @user.errors.any? %>
+<h2>The following errors prevented the todo from being saved</h2>
+<ul>
+<% @user.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
+
+
+<div class ="row" id ="form_new">
+    <%= form_for @user, :html => {:class =>"col s5"} do |f| %>
+        <div class="row">
+            <div class="input-field col s12">
+                    
+                <%=f.text_field :first_name, html: {class: "validate", id: "first_name", type: "text"}%>
+                <label for="first_name">First Name</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                    
+                <%=f.text_field :last_name, html: {class: "validate", id: "first_name", type: "text"}%>
+                <label for="first_name">Last Name</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                
+                <%=f.text_field :email, html: {class: "validate", id: "email", type: "email"}%>
+                <label for="email">Email</label>
+                <span class ="helper-text" data-error="wrong" data-success="right">Helper </span>
+            </div>
+            <br>
+            <div class="input-field col s12">
+                <%=f.text_field :password, html: {class: "validate", id: "password", type: "password"}%>
+                <label for="password">Password</label>
+                <span class ="helper-text" data-error="wrong" data-success="right"></span>
+            </div>
+        </div>
+       <center> <a class="waves-effect waves-light btn-large">
+        <%=f.submit 'Register'%>
+        </a>
+        </center>
+        <center><p>Go back to Login? <a href="/">Click Here</a></p></center>
+    <%end%>
+</div>
