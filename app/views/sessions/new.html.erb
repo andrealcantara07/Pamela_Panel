@@ -1,7 +1,7 @@
 <center><h1>Hello There</h1></center>
 
 <div class ="row" id ="form_home">
-    <%= form_for @user, :html => {:class =>"col s5"}  do |f| %>
+    <%= form_for (:session, :html => {:class =>"col s5", role: "form"}, url: login_path do |f| %>
         <div class="row">
             <div class="input-field col s12">
                 
