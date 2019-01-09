@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :teachers
   resources :users
 
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/login', to: 'sessions#destroy'
+  
   root 'users#index'
 
 

@@ -1,7 +1,7 @@
 <center><h1>Hello There</h1></center>
 
 <div class ="row" id ="form_home">
-    <%= form_for @user, :html => {:class =>"col s5"} do |f| %>
+    <%= form_for @user, :html => {:class =>"col s5"}, url: user_path do |f| %>
         <div class="row">
             <div class="input-field col s12">
                 
@@ -11,10 +11,13 @@
             </div>
             <br>
             <div class="input-field col s12">
-                <%=f.text_field :password, html: {class: "validate", id: "password", type: "password"}%>
+                
+                <%=f.password_field :password, html: {class: "validate", id: "password", type: "password"}%>
                 <label for="password">Password</label>
-                <span class ="helper-text" data-error="wrong" data-success="right"></span>
+               
             </div>
+            <br>
+        
         </div>
        <center> <a class="waves-effect waves-light btn-large">
         <%=f.submit 'Login'%>
