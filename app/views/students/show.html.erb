@@ -1,0 +1,18 @@
+<h3>Students</h3>
+
+
+
+
+<%= link_to 'Log Out', logout_path, method: :delete, class: "waves-effect waves-light btn-small center-align"%>
+
+<%= link_to 'Back', user_path, class: "waves-effect waves-light btn-small center-align"%>
+
+<%= link_to 'Add New', new_student_path, class: "waves-effect waves-light btn-small center-align"%>
+
+<% @students.each do |student| %>
+    <p><%= student.first_name %></p>
+    <p><%= student.last_name %></p>
+    <p><%= student.phone %></p>
+    <p><%= student.birthday %></p>
+    <p><%= student.cohort_id %></p>
+    <%end%>
