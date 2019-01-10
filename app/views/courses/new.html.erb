@@ -1,0 +1,37 @@
+<h3>Make a new Course</h3>
+
+
+<div class ="row" id ="form_new">
+    <%= form_for @course, :html => {:class =>"col s5"} do |f| %>
+        <div class="row">
+            <div class="input-field col s12">
+                    
+                <%=f.text_field :title, html: {class: "validate", id: "name", type: "text"}%>
+                <label for="first_name">Course</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                    
+                <%=f.text_field :hours, html: {class: "validate", id: "start_date", type: "text"}%>
+                <label for="first_name">Length</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                
+                <%=f.text_field :description, html: {class: "validate", id: "end_date", type: "email"}%>
+                <label for="email">Description</label>
+                
+            </div>
+          
+            <br>
+            
+        </div>
+       <center> <a class="waves-effect waves-light btn-large">
+        <%=f.submit 'Create Course'%>
+        </a>
+        </center>
+        
+    <%end%>
+</div>

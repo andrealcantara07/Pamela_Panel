@@ -1,0 +1,20 @@
+<h3>Instructor</h3>
+
+
+
+
+<%= link_to 'Log Out', logout_path, method: :delete, class: "waves-effect waves-light btn-small center-align"%>
+
+<%= link_to 'Back', user_path, class: "waves-effect waves-light btn-small center-align"%>
+
+<%= link_to 'Add New', new_teacher_path, class: "waves-effect waves-light btn-small center-align"%>
+
+
+<% @teachers.each do |teacher| %>
+    <p><%= teacher.first_name %></p>
+    <p><%= teacher.last_name  %></p>
+    <p><%= teacher.email  %></p>
+    <p><%= teacher.phone  %></p>
+    <p><%= teacher.education  %></p>
+    <p><%= teacher.age  %></p>
+    <%end%>
