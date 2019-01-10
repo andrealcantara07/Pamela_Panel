@@ -1,0 +1,50 @@
+<h3>Make a new Student</h3>
+
+
+<div class ="row" id ="form_new">
+    <%= form_for @student, :html => {:class =>"col s5"} do |f| %>
+        <div class="row">
+            <div class="input-field col s12">
+                    
+                <%=f.text_field :first_name, html: {class: "validate", id: "name", type: "text"}%>
+                <label for="first_name">First Name</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                    
+                <%=f.text_field :last_name, html: {class: "validate", id: "start_date", type: "text"}%>
+                <label for="first_name">Last Name</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                
+                <%=f.text_field :phone, html: {class: "validate", id: "end_date", type: "email"}%>
+                <label for="email">Phone</label>
+                
+            </div>
+          
+            <br>
+            <div class="input-field col s12">
+                
+            <%=f.text_field :birthday, html: {class: "validate", id: "end_date", type: "email"}%>
+            <label for="email">Birthday MM/DD/YYYY</label>
+            
+            </div>
+            <br>
+            <div class="input-field col s12">
+                
+            <%=f.text_field :cohort_id, html: {class: "validate", id: "end_date", type: "email"}%>
+            <label for="email">Cohort ID</label>
+            
+            </div>
+            <br>
+        </div>
+       <center> <a class="waves-effect waves-light btn-large">
+        <%=f.submit 'Create Student'%>
+        </a>
+        </center>
+        
+    <%end%>
+</div>

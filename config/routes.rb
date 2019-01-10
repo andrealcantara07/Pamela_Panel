@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :cohorts
   resources :courses
   resources :teachers
+  resources :students
   
 
   get '/login', to: 'sessions#new'
