@@ -1,0 +1,49 @@
+<h3>Make a new Cohort</h3>
+
+
+<div class ="row" id ="form_new">
+    <%= form_for @cohort, :html => {:class =>"col s5"} do |f| %>
+        <div class="row">
+            <div class="input-field col s12">
+                    
+                <%=f.text_field :name, html: {class: "validate", id: "name", type: "text"}%>
+                <label for="first_name">Cohort</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                    
+                <%=f.text_field :start_date, html: {class: "validate", id: "start_date", type: "text"}%>
+                <label for="first_name">Start Date</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                
+                <%=f.text_field :end_date, html: {class: "validate", id: "end_date", type: "email"}%>
+                <label for="email">End Date</label>
+                
+            </div>
+            <br>
+            <div class="input-field col s12">
+                
+                <%=f.text_field :teacher_id, html: {class: "validate", id: "course_id", type: "password"}%>
+                <label for="password">Instructor</label>
+               
+            </div>
+            <br>
+            <div class="input-field col s12">
+                
+                <%=f.text_field :course_id, html: {class: "validate", id: "password_confirmation", type: "password"}%>
+                <label for="password_confirmation">Course</label>
+               
+            </div>
+            <br>
+        </div>
+       <center> <a class="waves-effect waves-light btn-large">
+        <%=f.submit 'Create Cohort'%>
+        </a>
+        </center>
+        
+    <%end%>
+</div>
