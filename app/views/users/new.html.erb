@@ -1,13 +1,18 @@
 <center><h3>Register Here</h3></center>
 
+
+<div class="row">
+<div class="col s4 orange-text text-darken-4">
 <% if @user.errors.any? %>
-<h2>The following errors prevented the todo from being saved</h2>
+<h4>The following errors prevented the todo from being saved</h4>
 <ul>
 <% @user.errors.full_messages.each do |msg| %>
 <li><%= msg %></li>
 <% end %>
 </ul>
 <% end %>
+</div>
+</div>
 
 
 <div class ="row" id ="form_new">
